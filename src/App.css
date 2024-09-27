@@ -1,7 +1,7 @@
 :root {
   --grey: #f3f4f6;
   --white: #ffffff;
-  --primary: #0e374f;
+  --third: #0e374f;
   --primary: rgba(120, 14, 14);
   --secondary: rgba(120, 14, 14, .07);
 }
@@ -23,9 +23,15 @@ body {
   gap: 20px;
 }
 
-.resume-container {
+.resume {
   display: flex;
   flex-direction: column;
+  margin-left: 40px;
+  width: 768px;
+  height: 1056px;
+  background-color: var(--white);
+  flex-shrink: 0;
+  box-shadow: #63636e33 0 7px 15px;
 }
 
 .card {
@@ -46,11 +52,9 @@ body {
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
-.card h1 {
-  font-size: 24px;
+.card h3 {
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 16px;
-  margin-left: 20px;
   color: var(--primary);
 }
 
@@ -98,4 +102,86 @@ body {
   font-size: 24px;
   font-weight: 600;
   color: var(--primary);
+}
+
+.resume-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 24px;
+}
+
+.resume-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.resume-header .contact-info {
+  font-size: 14px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.resume-experience, .resume-education {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  color: var(--primary);
+  margin-left: 10px;
+}
+
+.resume-education h3, .resume-experience h3 {
+  background-color: var(--secondary);
+  color: var(--primary);
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primary);
+}
+
+.toggle-form {
+  cursor: pointer;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.cv-entry {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  margin: 0;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.left p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
